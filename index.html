@@ -6,12 +6,17 @@
     <title>StudyCity – Lerne. Baue. Werde besser.</title>
 
     <style>
+        /* Hintergrund-Dorf */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #FFF7F2; /* sehr sanfter Pastell-Hintergrund */
+            background-color: #FFF7F2;
             color: #3A3A3A;
+            background-image: url('Dorf.png'); /* Hintergrund-Dorf */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         header {
@@ -103,10 +108,40 @@
             background: #FFEEF2;
             color: #555;
         }
+
+        /* Sidebar für Figuren */
+        .figuren-sidebar {
+            position: fixed;       /* bleibt beim Scrollen sichtbar */
+            right: 20px;           /* Abstand vom rechten Rand */
+            top: 100px;            /* Abstand von oben */
+            display: flex;
+            flex-direction: column;
+            gap: 15px;             /* Abstand zwischen Figuren */
+            z-index: 1000;         /* über Content */
+        }
+
+        /* Figurengröße anpassen & Animation */
+        .figur {
+            width: 80px;           /* Größe der Figuren */
+            height: auto;
+            animation: wackeln 2s infinite; /* leichtes Wackeln */
+        }
+
+        @keyframes wackeln {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
     </style>
 </head>
 
 <body>
+    <!-- Sidebar für Figuren -->
+    <div class="figuren-sidebar">
+        <img src="Katze.jpg" alt="Katze" class="figur">
+        <img src="Koala2.png" alt="Koala" class="figur">
+        <img src="Schweinchen.png" alt="Schweinchen" class="figur">
+    </div>
+
     <header>
         <h1>StudyCity</h1>
         <p>Baue deine Lernwelt – eine Stadt, die mit jedem Fokus wächst.</p>
@@ -123,8 +158,6 @@
 
     <div class="section">
         <h2>Pitch-Video</h2>
-
-        <!-- 🔴 Platzhalter für dein YouTube-Video einfügen -->
         <iframe 
             src="https://www.youtube.com/embed/DEIN-VIDEO-LINK-HIER"
             title="StudyCity Pitch Video">
@@ -133,21 +166,18 @@
 
     <div class="section">
         <h2>Warum StudyCity?</h2>
-
         <div class="features">
             <div class="feature-item">🎯 Fokus durch Pomodoro-Timer</div>
             <div class="feature-item">🌱 Deine Stadt wächst mit jedem Lernfortschritt</div>
             <div class="feature-item">🪙 Sammle Münzen & Erfolge</div>
             <div class="feature-item">📊 Motivierende Statistiken</div>
             <div class="feature-item">🔔 Erinnerung an Lernsessions</div>
-            <div class="feature-item">🛠️ Spielerische Welt</div>
+            <div class="feature-item">🛠️ Spielerische Welt mit individuellen Charakteren</div>
         </div>
     </div>
 
     <div class="section">
         <h2>Jetzt Termin buchen</h2>
-
-        <!-- 🔵 Platzhalter für deinen Calendly Link -->
         <a class="button" href="DEIN-CALENDLY-LINK-HIER" target="_blank">
             Termin vereinbaren
         </a>
@@ -156,7 +186,5 @@
     <footer>
         © 2025 StudyCity – Eine Startup-Idee von Leya-Samira Knauber
     </footer>
-
 </body>
 </html>
-
