@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>StudyCity – Lerne. Baue. Werde besser.</title>
 
+    <!-- Verspielte Schrift über Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
     <style>
         /* Hintergrund-Dorf */
         body {
@@ -19,6 +22,7 @@
             background-repeat: no-repeat;
         }
 
+        /* Header & Logo */
         header {
             background: #FFE5EA; /* Pastell-Rosa */
             padding: 30px;
@@ -28,8 +32,10 @@
 
         header h1 {
             margin: 0;
-            font-size: 42px;
-            color: #333;
+            font-size: 48px;
+            font-family: 'Pacifico', cursive; /* Verspielte Schrift für Logo */
+            color: #FF5C7A;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
         }
 
         header p {
@@ -37,6 +43,7 @@
             margin-top: 10px;
         }
 
+        /* Sections */
         .section {
             padding: 50px 20px;
             max-width: 900px;
@@ -46,6 +53,8 @@
         h2 {
             text-align: center;
             color: #444;
+            font-family: 'Pacifico', cursive; /* Verspielte Schrift auch für Überschriften */
+            font-size: 32px;
         }
 
         .value {
@@ -120,7 +129,7 @@
             z-index: 1000;         /* über Content */
         }
 
-        /* Figurengröße anpassen & Animation */
+        /* Figurengröße & Animation */
         .figur {
             width: 80px;           /* Größe der Figuren */
             height: auto;
@@ -137,7 +146,7 @@
 <body>
     <!-- Sidebar für Figuren -->
     <div class="figuren-sidebar">
-        <img src="Katze.png" alt="Katze" class="figur">
+        <img src="Katze.jpg" alt="Katze" class="figur">
         <img src="Koala2.png" alt="Koala" class="figur">
         <img src="Schweinchen.png" alt="Schweinchen" class="figur">
     </div>
